@@ -12,7 +12,7 @@ if __name__ == "__main__":
         if disp.is_alive():
             print(f"Display has started on {os.environ.get("DISPLAY")}")
             try:
-                ffmpeg = subprocess.Popen(["ffmpeg", "-probesize", "30M", "-f", "x11grab", "-framerate",  "60", "-i", f"{os.environ.get("DISPLAY")}", "-c:v", "ffv1", "-g", "1", f"{time.ctime()}.mkv"])
+                ffmpeg = subprocess.Popen(["ffmpeg", "-probesize", "30M", "-f", "x11grab", "-framerate",  "60", "-i", f"{os.environ.get("DISPLAY")}", "-c:v", "ffv1", "-g", "1", f"./output/{time.ctime()}.mkv"])
             except:
                 raise Exception()
         else:
