@@ -1,3 +1,89 @@
-.venv
+# Python-specific ignores
+.venv/
+__pycache__/
+output/*
+
+# React & Vite ignores
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.eslintcache/
+frontend/.turbo/
+frontend/.tsbuildinfo/
+
+# Ignore local environment variables
+frontend/.env*
+frontend/src/vite-env.d.ts
+
+# Ignore only temp assets (but keep public/)
+frontend/src/assets/tmp/
+
+# Ignore logs
+frontend/logs/
+frontend/*.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Ignore compiled binaries (if applicable)
+frontend/build/
+
+# Ignore dependency caches
+frontend/jspm_packages/.venv
 __pycache__
 output/*
+frontend/public
+frontend/dist
+frontend/node_modules
+frontend/src/assets
+frontend/src/vite-env.d.ts
+frontend/README.md
+
+# Logs
+frontend/logs
+frontend/*.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*frontend/
+frontend/yarn-error.log*frontend/
+
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+frontend/build/Release
+
+# Dependency directories
+frontend/node_modules/
+frontend/jspm_packages/
+
+# Distribution directories
+frontend/dist/
+
+# Typescript v1 declaration files
+frontend/typings/
+
+# Optional npm cache directory
+frontend/.npm
+
+# Optional eslint cache
+frontend/.eslintcache
+
+# Optional REPL history
+frontend/.node_repl_history
+
+# Output of 'npm pack'
+frontend/*.tgz
+
+# Yarn Integrity file
+frontend/.yarn-integrity
+
+frontend/.npm
+frontend/.yarn-integrity
+
+# Ignore output of 'npm pack'
+frontend/*.tgz
+
+# Ignore optional REPL history
+frontend/.node_repl_history
+
+frontend/public
+frontend/src/assets
+frontend/README.md
