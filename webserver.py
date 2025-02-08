@@ -1,6 +1,8 @@
-from flask import Flask, send_file, send_from_directory
+from flask import Flask, send_file, send_from_directory, jsonify
+import main
 
 app = Flask(__name__)
+Server = main.HeadlessServer
 
 @app.get("/")
 def home():
@@ -16,8 +18,8 @@ def assets(name):
 
 @app.get("/api/on")
 def callScript():
-    return "Success"
+    return jsonify({"Status": Server.startRecording(Server)})
 
 @app.get("/api/off")
-def callScript():
-    return "Success"
+def cancelScript():
+    return jsonify({"Status": Server.StopRecording(Server)})
