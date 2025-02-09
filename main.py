@@ -27,7 +27,7 @@ class HeadlessServer:
                 return
         
             async with async_playwright() as p:
-                browser = await p.chromium.launch(headless=False)
+                browser = await p.chromium.launch(headless=True)
                 self.browser = browser
                 page = await browser.new_page()
                 await page.set_viewport_size({"width": 1920, "height": 1080})
@@ -36,7 +36,8 @@ class HeadlessServer:
                 await page.get_by_role("button", name="Join").click()
                 await page.wait_for_url("https://foundry.gianwallace.com/game")
                 await page.wait_for_load_state()
-                await page.get_by_label("Close Window").click()
+                # await page.get_by_label("Close Window").click()
+                await page.get_by_label("Collapse or Expand").click()
                 await self.shutdown.wait()
     
     async def stopRecording(self):

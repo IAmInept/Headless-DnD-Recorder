@@ -2,6 +2,7 @@
 .venv/
 __pycache__/
 output/*
+firefox-profile/
 
 # React & Vite ignores
 frontend/node_modules/
