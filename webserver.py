@@ -1,8 +1,9 @@
 from flask import Flask, send_file, send_from_directory, jsonify
 import main
+import asyncio
 
 app = Flask(__name__)
-Server = main.HeadlessServer
+demo = main.HeadlessServer()
 
 @app.get("/")
 def home():
@@ -18,8 +19,10 @@ def assets(name):
 
 @app.get("/api/on")
 def callScript():
-    return jsonify({"Status": Server.startRecording(Server)})
+    asyncio.run(demo.startRecording())
+    return jsonify({"Status": "Running"})
 
 @app.get("/api/off")
 def cancelScript():
-    return jsonify({"Status": Server.StopRecording(Server)})
+    asyncio.run(demo.stopRecording())
+    return jsonify({"Status": "Closed"})
