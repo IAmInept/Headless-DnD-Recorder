@@ -35,6 +35,8 @@ class HeadlessServer:
                 await page.select_option("select[name='userid']", value="cmD8QxeWRQLEkt86")
                 await page.get_by_role("button", name="Join").click()
                 await page.wait_for_url("https://foundry.gianwallace.com/game")
+                await page.wait_for_load_state()
+                await page.get_by_label("Close Window").click()
                 await self.shutdown.wait()
     
     async def stopRecording(self):

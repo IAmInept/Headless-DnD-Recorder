@@ -5,6 +5,36 @@
   text-align: center;
 }
 
+#btn_srtRecording {
+  background-color: blue;
+}
+
+#btn_srtRecording:disabled {
+  background-color: green;
+  color: black;
+  cursor: default;
+}
+
+#btn_stpRecording {
+  background-color: red;
+  color: white;
+}
+
+#btn_stpRecording:disabled {
+  background-color: #323232;
+  color: black;
+  cursor: default;
+}
+
+#btn_stpRecording:disabled:hover {
+  border-color: inherit;
+}
+
+#btn_stpRecording {
+  background-color: #323232;
+  color: black;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

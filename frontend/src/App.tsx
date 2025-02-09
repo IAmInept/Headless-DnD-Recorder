@@ -12,8 +12,8 @@ function App() {
     <>
       <h1>Foundry VTT Recorder</h1>
       <div>
-        <button disabled={isRecording === recordingState.Recording} onClick={() => {SetRecording(1); fetch("/api/on")}}>Start Recording</button>
-        <button disabled={isRecording === recordingState.Standby} onClick={() => {SetRecording(0); fetch("/api/off")}} >Stop Recording</button> 
+        <button id="btn_srtRecording" disabled={isRecording === recordingState.Recording} onClick={() => {SetRecording(1); fetch("/api/on")}}>Start Recording</button>
+        <button id="btn_stpRecording"disabled={isRecording === recordingState.Standby} onClick={() => {SetRecording(0); fetch("/api/off")}} >Stop Recording</button> 
       </div>
     </>
   )
