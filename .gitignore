@@ -3,6 +3,7 @@
 __pycache__/
 output/*
 firefox-profile/
+.env
 
 # React & Vite ignores
 frontend/node_modules/

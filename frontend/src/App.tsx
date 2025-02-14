@@ -11,9 +11,9 @@ function App() {
   return (
     <>
       <h1>Foundry VTT Recorder</h1>
-      <div>
+      <div id='btn_container'>
         <button id="btn_srtRecording" disabled={isRecording === recordingState.Recording} onClick={() => {SetRecording(1); fetch("/api/on")}}>Start Recording</button>
-        <button id="btn_stpRecording"disabled={isRecording === recordingState.Standby} onClick={() => {SetRecording(0); fetch("/api/off")}} >Stop Recording</button> 
+        <button id="btn_stpRecordingdarkgreen"disabled={isRecording === recordingState.Standby} onClick={() => {SetRecording(0); fetch("/api/off")}} >Stop Recording</button> 
       </div>
     </>
   )

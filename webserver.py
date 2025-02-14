@@ -19,7 +19,8 @@ def assets(name):
 
 @app.get("/api/on")
 def callScript():
-    asyncio.run(demo.startRecording())
+    demo.initBuffer()
+    asyncio.run(demo.initBrowser())
     return jsonify({"Status": "Running"})
 
 @app.get("/api/off")
